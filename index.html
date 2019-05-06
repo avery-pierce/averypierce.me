@@ -1,8 +1,66 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lobster" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            h1 {
+                font-family: 'Lobster', cursive;
+            }
+    
+            html {
+                background-color: rgb(236, 238, 248);
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+            }
+
+            /* Content-wrapper */
+            .content {
+                margin: auto;
+                max-width: 800px;
+            }
+
+            /* Header */
+            header {
+                margin-top: 10em;
+            }
+
+            header h1 {
+                color: #666;
+                font-size: 3em;
+            }
+
+            header h2 {
+                color: #888;
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            /* Content */
+            .content-body {
+                margin-top: 30px;
+            }
+
+            .pronouns, .name {
+                color: #000;
+            }
+
+        </style>
+    </head>
+
     <body>
-        <h1>Hi!</h1>
-        <h2>My name's Avery, and my pronouns are he/him.</h3>
-        <p>I'm an iOS app developer, amateur bread baker, and I have two pet guinea pigs.</p>
+        <div class="content">
+            <header>
+                <h1>Hello World! My name's <span class="name">Avery</span>.</h1>
+                <h2>my pronouns are <span class="pronouns">he/him</span>.</h2>
+            </header>
+            <div class="content-body">
+                <p>I'm an iOS app developer, amateur bread baker, and I have two pet guinea pigs.</p>
+            </div>
+        </div>
     </body>
 </html>
