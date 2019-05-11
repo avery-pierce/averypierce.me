@@ -2,8 +2,6 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lobster" rel="stylesheet">
         <style>
             * {
                 margin: 0;
@@ -11,112 +9,90 @@
                 box-sizing: border-box;
             }
     
-            h1, h2 {
-                font-family: 'Lobster', cursive;
-            }
-    
             html {
                 background-color: #FFF;
-                font-family: 'Lato', sans-serif;
+                font-family: sans-serif;
                 font-weight: 400;
-                font-size: 1em;
+                font-size: 1.6em;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            @media only screen and (max-width: 640px) {
+                html {
+                    font-size: 1.2em;
+                }
+            }
+
+            .page-header {
+                background-color: #667766;
+                height: 10em;
+                margin-bottom: 4em;
+                padding: 1px;
+            }
+
+            .page-header .profile-image {
+                display: block;
+                margin: auto;
+                margin-top: 3em;
+                border-radius: 100%;
+                width: 10em;
+                border: solid 0.2em #FFF;
             }
 
             /* Content-wrapper */
             .content {
                 margin: auto;
+                padding-left: 1.4em;
+                padding-right: 1.4em;
                 max-width: 800px;
-            }
-
-            @media only screen and (max-width: 760px) {
-                .content {
-                    width: 100%;
-                    padding-left: 1.4em;
-                    padding-right: 1.4em;
-                }
-            }
-
-            /* Header */
-            header {
-                margin-top: 10em;
-            }
-
-            header > div {
-                display: inline-block;
-                vertical-align: middle;
-            }
-
-            header .profile-image-wrapper {
-                margin-right: 0.8em;
-            }
-
-            header img.profile-image {
-                max-width: 6em;
-                border-radius: 3em;
-
             }
 
             header h1 {
                 color: #222;
-                font-size: 3em;
-            }
-
-            @media only screen and (max-width: 760px) {
-                header h1 {
-                    font-size: 2em;
-                }
+                font-size: 1.8em;
             }
 
             header h2 {
                 color: #666;
-                font-size: 2em;
+                font-size: 1.4em;
             }
-
-            @media only screen and (max-width: 760px) {
-                header h2 {
-                    font-size: 1.6em;
-                }
-            }
-
-            header h3 {
-                color: #888;
-                font-size: 2em;
-                font-weight: 700;
-            }
-
-            @media only screen and (max-width: 760px) {
-                header h3 {
-                    font-size: 1.2em;
-                }
-            }
-
 
             /* Content */
             .content-body {
-                margin-top: 30px;
+                margin-top: 1em;
             }
 
-            .pronouns, .name {
+            .name {
                 color: #000;
+            }
+
+            .pronouns {
+                font-size: 0.7em;
             }
 
         </style>
     </head>
 
     <body>
+        <header class="page-header">
+            <img class="profile-image" src="/img/profile-image.jpg" />
+        </header>
         <div class="content">
             <header>
-                <div class="profile-image-wrapper">
-                    <img class="profile-image" src="/img/profile-image.jpg" />
-                </div>
                 <div>
                     <h1>Hello World!</h1>
-                    <h2>My name's <span class="name">Avery</span>.</h2>
-                    <h3>my pronouns are <span class="pronouns">he/him</span>.</h3>
+                    <h2>My name's <span class="name">Avery</span>. <span class="pronouns">(he/him)</span></h2>
                 </div>
             </header>
             <div class="content-body">
-                <p>I'm an iOS app developer, amateur bread baker, and I have two pet guinea pigs.</p>
+                <p>I'm an iOS app developer, amateur bread baker, and I have two pet guinea pigs. You can find me on twitter at <a href="https://twitter.com/AveryPierceApps">@AveryPierceApps</a>.</p>
             </div>
         </div>
     </body>
