@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+            :root {
+                color-scheme: light dark;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 1em;
+                font-family: sans-serif;
+
+                margin-top: 3em;
+
+                background-color: #EEEEEF;
+                color: #222;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html {
+                    background-color: #222223;
+                    color: #DDD;
+                }
+            }
+
+            @media only screen and (min-width: 640px) {
+                html {
+                    font-size: 1.1em;
+                }
+            }
+
+            @media only screen and (min-width: 860px) {
+                html {
+                    font-size: 1.2em;
+                }
+            }
+
+            @media print { 
+                html {
+                    background-color: #FFF;
+                    color: #000;
+                    font-size: 0.8em;
+                    margin-top: 0;
+                    padding: 2em;
+                }
+            }
+
+            a {
+                color: #3366FF;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            @media print { 
+                a {
+                    text-decoration: underline;
+                    color: #000 !important;
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                a {
+                    color: #66AAFF;
+                }
+            }
+
+            .main-content {
+                margin: auto;
+                padding: 0 1em;
+                max-width: 860px;
+                margin-bottom: 6em;
+            }
+
+            .notice {
+                background-color: #FFF;
+                border: solid 1px #DDD;
+                padding: 0.6em 1em 0;
+                border-radius: 1px;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                .notice {
+                    background-color: #333334;
+                    border-color: #444;
+                }
+            }
+
+            h1, h2, p, li, ul, ol {
+                line-height: 1.5em;
+            }
+
+            header {
+                margin-bottom: 0.4em;
+                border-bottom: solid 1px #DDD;
+                margin-top: 1.6em;
+                padding-bottom: 0.2em;
+            }
+
+            header h1, header h2, header p {
+                margin: 0;
+                padding: 0;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                header {
+                    border-bottom: solid 1px #666;
+                }
+            }
+
+            strong {
+                color: #000;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                strong {
+                    color: #FFF;
+                }
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            .header-contact {
+                font-size: 0.8em;
+                font-weight: normal;
+                float: right;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+
+            p {
+                margin-bottom: 0.8em;
+            }
+
+            li {
+                margin-bottom: 0.4em;
+            }
+
+            ul, ol {
+                margin-left: 1em;
+            }
+
+            .image-gallery {
+                text-align: center;
+            }
+
+            .image-gallery img {
+                max-height: 20em;
+                max-width: 100%;
+            }
+
+            .image-float-right {
+                float: right;
+                width: 20%;
+                margin-top: 1em;
+                margin-left: 2em;
+            }
+
+            @media print {
+                .no-print {
+                    display: none !important;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="main-content">
+
+            <header>
+                <h1>Avery Pierce <small>(he/him)</small></h1>
+                <p><a href="mailto:resume@averypierce.me">resume@averypierce.me</a></p>
+            </header>
+            
+            <p>I'm an iOS app developer, with a taste for fully native apps built with Swift and UIKit.</p>
+            
+            <p>I've been writing code in form or another for over 10 years! Right now, my core skillset is Swift, Node.js, and Typescript, but I also have experience with a variety of other tools and languages which are listed below. I'm very resourceful and self-motivated – nearly all of my programming skills are self-taught through books, videos, and blogs.</p>
+            
+            <p>I'm excited about building awesome tools that empower people do their jobs more effectively. That means writing clean code, and designing intuitive and powerful user interfaces.</p>
+            
+            <div class="no-print notice">
+                <p>You can also <a href="resume.pdf">download this page as a PDF</a>.</p>
+            </div>
+
+            <header>
+                <h3>Skills & Tools</h3>
+            </header>
+
+            <p>Swift, Objective-C, Node.js, Typescript, Xcode, Visual Studio Code, Git, SourceTree, Gitlab, Gitlab Pipelines, HTML, CSS, Javascript, React, Angular, Mongo DB, SQLite, Postgres, Docker, Java, Kotlin, Android Studio</p>
+
+            <header>
+                <h3>Parts Town – Senior iOS App Developer – Addison, IL</h3>
+                <small>May 2016 - Present</small>
+            </header>
+
+            Parts Town is a distributor of replacement parts for commercial kitchen equipment. The <a href="https://itunes.apple.com/us/app/parts-town/id399259573">Parts Town app</a> provides e-commerce and reference functionality. The app currently has 4.8 stars on the iTunes app store.
+
+            <div class="image-gallery">
+                <a href="img/model-details-screenshot.png"><img src="img/model-details-screenshot.png" /></a>
+                <a href="img/interactive-diagrams-screenshot.png"><img src="img/interactive-diagrams-screenshot.png" /></a>
+                <a href="img/parts-list-screenshot.png"><img src="img/parts-list-screenshot.png" /></a>
+            </div>
+            
+            <ul>
+                <li>Sole iOS app developer at Parts Town for 3 years.</li>
+                <li>Added several features to the flagship Parts Town app, including interactive wire diagrams, synchronized manuals, and order history.</li>
+                <li>Designed and built an API middleware, written in node.js & typescript, that enables the Parts Town mobile apps to interface with our back-end e-commerce system. Added thorough test coverage of this system.</li>
+                <li>Successfully managed app compaibility as the company transitioned from one e-commerce platform to another.</li>
+                <li>Designed nearly all the icons and UX for the Parts Town App for iOS.</li>
+                <li>Piloted a brand new app for our UK subsidiary, <a href="https://itunes.apple.com/gb/app/first-choice-catering-spares/id1230207337">First Choice Catering Spares</a>.</li>
+                <li>Built variations of the app with custom skins for some of our corporate partners.</li>
+                <li>Successfully migrated the app from Swift 2 to Swift 5 over the lifetime of the app.</li>
+                <li>Performed emergency support on the Android app when needed.</li>
+                <li>Conducted interviews for new programmers in the team as it grew.</li>
+            </ul>
+
+            <header>
+                <h3>Independent iOS App Developer</h3>
+                <small>2011 – 2012; 2015</small>
+            </header>
+
+            <p><strong>2015</strong>: I came up with a way to deep-link digital business cards in a website so that they could be downloaded to a device. I developed and published the iPhone app Rectango (no longer available) in conjunction with the Digidex format for digital business cards as a proof of concept. See: <a href="http://rectangoapp.com">rectangoapp.com</a> and <a href="http://digidex.org">digidex.org</a>.</p>
+
+            <p><strong>2011 - 2012</strong>: Developed a iPhone game called Kardball, based on a card game that was invented by a family member. (This app is no longer available in the app store).</p>
+
+            <header>
+                <h3>RR Donnelley – Technical Support Analyst / Developer – Elgin, IL</h3>
+                <small>June 2012 - May 2016</small>
+            </header>
+
+            <ul>
+                <li>Provided remote technical support for enterprise tools and applications for users across the United States.</li>
+                <li>Developed and supported applications for OS X and the web that are tightly integrated with existing enterprise systems for use within the company.</li>
+                <li>Developed and supported server-side tools for workflow automation.</li>
+            </ul>
+
+            <header>
+                <h3>UWM Help Desk – Level 1 Consultant / Shift Supervisor – Milwaukee, WI</h3>
+                <small>September 2008 – May 2012</small>
+            </header>
+
+            <p>The UWM Help Desk assists students, faculty, staff, and applicants with a wide range of issues including desktop software for both Windows and Mac operating systems, online course enrollment, email, calendar, and account access. I began as a level 1 consultant, assiting customers over the phone and in the campus computer labs. I was later promoted to shift supervisor.</p>
+
+            <header>
+                <h3>Education</h3>
+            </header>
+
+            <p>University of Wisconsin – Milwaukee (UWM), Milwaukee, WI</p>
+            <p>BBA Information Technology Management, 2012</p>
+
+        </div>
+    </body>
+</html>
