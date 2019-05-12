@@ -2,185 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-
-                :root {
-                    color-scheme: light dark;
-                }
-    
-                * {
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                }
-    
-                html {
-                    font-size: 1em;
-                    font-family: sans-serif;
-    
-                    margin-top: 3em;
-    
-                    background-color: #EEEEEF;
-                    color: #222;
-                }
-    
-                @media (prefers-color-scheme: dark) {
-                    html {
-                        background-color: #222223;
-                        color: #DDD;
-                    }
-                }
-    
-                @media only screen and (min-width: 640px) {
-                    html {
-                        font-size: 1.1em;
-                    }
-                }
-    
-                @media only screen and (min-width: 860px) {
-                    html {
-                        font-size: 1.2em;
-                    }
-                }
-    
-                @media print { 
-                    html {
-                        background-color: #FFF;
-                        color: #000;
-                        font-size: 0.8em;
-                        margin-top: 0;
-                        padding: 2em;
-                    }
-                }
-    
-                a {
-                    color: #3366FF;
-                    text-decoration: none;
-                }
-    
-                a:hover {
-                    text-decoration: underline;
-                }
-    
-                @media print { 
-                    a {
-                        text-decoration: underline;
-                        color: #000 !important;
-                    }
-                }
-    
-                @media (prefers-color-scheme: dark) {
-                    a {
-                        color: #66AAFF;
-                    }
-                }
-    
-                .main-content {
-                    margin: auto;
-                    padding: 0 1em;
-                    max-width: 860px;
-                    margin-bottom: 6em;
-                }
-    
-                .notice {
-                    background-color: #FFF;
-                    border: solid 1px #DDD;
-                    padding: 0.6em 1em 0;
-                    border-radius: 1px;
-                }
-    
-                @media (prefers-color-scheme: dark) {
-                    .notice {
-                        background-color: #333334;
-                        border-color: #444;
-                    }
-                }
-    
-                h1, h2, p, li, ul, ol {
-                    line-height: 1.5em;
-                }
-    
-                header {
-                    margin-bottom: 0.4em;
-                    border-bottom: solid 1px #DDD;
-                    margin-top: 1.6em;
-                    padding-bottom: 0.2em;
-                }
-    
-                header h1, header h2, header p {
-                    margin: 0;
-                    padding: 0;
-                }
-    
-                @media (prefers-color-scheme: dark) {
-                    header {
-                        border-bottom: solid 1px #666;
-                    }
-                }
-    
-                strong {
-                    color: #000;
-                }
-    
-                @media (prefers-color-scheme: dark) {
-                    strong {
-                        color: #FFF;
-                    }
-                }
-    
-                h1 {
-                    font-size: 1.4em;
-                }
-    
-                .header-contact {
-                    font-size: 0.8em;
-                    font-weight: normal;
-                    float: right;
-                }
-    
-                h2 {
-                    font-size: 1.2em;
-                }
-    
-                h3 {
-                    font-size: 1em;
-                }
-    
-                p {
-                    margin-bottom: 0.8em;
-                }
-    
-                li {
-                    margin-bottom: 0.4em;
-                }
-    
-                ul, ol {
-                    margin-left: 1em;
-                }
-    
-                .image-gallery {
-                    text-align: center;
-                }
-    
-                .image-gallery img {
-                    max-height: 20em;
-                    max-width: 100%;
-                }
-    
-                .image-float-right {
-                    float: right;
-                    width: 20%;
-                    margin-top: 1em;
-                    margin-left: 2em;
-                }
-    
-                @media print {
-                    .no-print {
-                        display: none !important;
-                    }
-                }
-    
-            </style>
+        <link rel="stylesheet" href="stylesheet.css" />
     </head>
 
     <body>
@@ -192,34 +14,32 @@
                 <p><a href="mailto:resume@averypierce.me">resume@averypierce.me</a></p>
             </header>
             
-            <p>I'm an iOS app developer, with a taste for fully native apps built with Swift and UIKit.</p>
+            <p>I'm an iOS app developer, with a taste for fully native apps built with Swift and UIKit. If you're interested in hiring me for your iOS project, you've come to the right place!</p>
             
-            <p>I've been writing code in form or another for over 10 years! Right now, my core skillset is Swift, Objective-C, Node.js, and Typescript, but I also have experience with a variety of other tools and languages (which I won't bother listing here). I'm very resourceful and self-motivated – nearly all of my programming skills are self-taught through books, videos, and blogs.</p>
+            <p>I've been writing code in form or another for over 10 years. Right now, my core skillset is Swift, Objective-C, Node.js, and Typescript, but I also have experience with a variety of other tools and languages (which you can see on my <a href="resume.html">resume</a>). I'm very resourceful and self-motivated – nearly all of my programming skills are self-taught through books, videos, and blogs.</p>
             
             <p>I'm excited about building awesome tools that empower people do their jobs more effectively. That means writing clean code, and designing intuitive and powerful user interfaces.</p>
-            
-            <div class="no-print notice">
-                <p>If you're looking for a more traditional resume, <a href="resume.html">click here</a>.</p>
-                <p>You can also download this page as a PDF</p>
-            </div>
 
             <header>
                 <h2>Previous gigs</h2>
             </header>
+
+            <div class="notice">
+                <p class="no-print">I also have a more <a href="resume.html">formal resume</a>, if that's what you prefer.</p>
+                <p class="only-print">You can find my formal resume at averypierce.me/hire/resume.html.</p>
+            </div>
             
-            <!-- <img class="image-float-right" src="img/parts-town-app-icon.png"> -->
-            
-            <p>For the past 3 years, I've been the <strong>lead iOS app developer at Parts Town</strong> in Addison, Illinois. During that time, we've added feature after feature to our e-commerce and reference app, like interactive wire diagrams, smart manuals, and order history. In addition to writing the code for all these projects, I also took the helm on the UI and UX tasks. In fact, most of the icons in the Parts Town app were designed by me.</p>
+            <p>For the past 3 years, I've been a full-time senior iOS app developer at Parts Town in Addison, Illinois. During that time, we've added feature after feature to our e-commerce and reference app, like interactive wire diagrams, smart manuals, and order history. In addition to writing the code for all these projects, I also took the helm on the UI and UX tasks. In fact, most of the icons in the Parts Town app were designed by me.</p>
             
             <div class="image-gallery">
                 <a href="img/model-details-screenshot.png"><img src="img/model-details-screenshot.png" /></a>
                 <a href="img/interactive-diagrams-screenshot.png"><img src="img/interactive-diagrams-screenshot.png" /></a>
                 <a href="img/parts-list-screenshot.png"><img src="img/parts-list-screenshot.png" /></a>
             </div>
-            
+
             <p>While at Parts Town, we also piloted a totally custom app for First Choice Catering Spares, our parts distribution subsidiary in the UK (the project was later handed off once they hired a rockstar in-house development team, so I can't take all the credit for the outstanding app you see today).</p>
-            
-            <p>Before Parts Town, I worked at RR Donnelley in Elgin IL. In my role there, I built lots of software tools to streamline team's workflow. Those tools included Mac desktop applications (written with Objective-C and AppKit), web applications, and server-side scripts for automation. These tools had to interact with our enterprise asset management systems. In hindsight, the team had accidently self-organized into something that sort of resembled an agile development team, with software updates being rolled out regularly (sometimes multiple times a week), and developers interacting directly with end-users to identify and resolve pain points.</p>
+
+            <p>The first iPhone app I wrote was based on a card game invented by a family member. The game was called Kardball, and I released it before the iPhone SDK supported ARC, which meant I had to write memory retain and release cycles by hand! (Unfortunately, the game is no longer on the App Store, because keeping it maintained was too much hassle)</p>
             
             <header>
                 <h2>What I'm looking for in my ideal role</h2>
@@ -234,7 +54,7 @@
             <li>An epmployer that values an employee's input as much as their output. It's hard to take pride in your work when someone else calls the shots and takes all credit. Inviting the engineering team to be part of the decision making process gives them a sense of ownership of the project, which results in better code.</li>
             <li>A mostly quiet workspace with some amount of privicy. I'm okay with cubicles, but I'd like to avoid open-plan offices if possible.</li>
             <li>Minimal travel. I get travel anxiety, plus I'm a tall dude which makes air travel especially unpleasant. If your role requires more than 2 trips per year, I don't think I'll be a good fit.</li>
-            <li>Remote work <strong>or</strong> comfortable commute from Elgin, IL (far west suburbs of Chicago). Schaumburg and Downers Grove are both good locations, but I'm afraid I'm not looking to commute into the city of Chicago.</li>
+            <li>Remote work <strong>or</strong> comfortable commute from my home town of Elgin, IL (far west suburbs of Chicago). Schaumburg and Downers Grove are both good locations, but I'm afraid I'm not looking to commute into the city of Chicago.</li>
             </ul>
             
             <p>If the position you're hiring for doesn't meet every one of these criteria, that's okay! Maybe we can still work something out.</p>
@@ -243,8 +63,9 @@
                 <h1>But enough about me...</h1>
             </header>
             
-            <p>Let me here a little about you! If you think I would be a good fit for your team, please send me a message at <a href="mailto:resume@averypierce.me">resume@averypierce.me</a>. When you contact me, please tell me the name of the business you represent, and preferably your company's website. If you don't, I'll assume you're a recruiting firm trying to populate your client database, and I won't respond.</p>
-            
+            <p>Let me here a little about you! If you think I would be a good fit for your team, please send me a message at <a href="mailto:resume@averypierce.me">resume@averypierce.me</a>. A company's culture is important to me. When you contact me, please tell me the name of the business you represent, and preferably the company's website, so I can get a sense of what your company is all about.</p>
+
+            <p>I look forward to hearing from you!</p>
         </div>
     </body>
 </html>
