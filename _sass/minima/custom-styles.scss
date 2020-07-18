@@ -49,7 +49,7 @@ div.site-logo {
   }
 }
 
-h1 {
+h1, ul.post-list h3 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -199,4 +199,34 @@ a {
   width: 20%;
   margin-top: 1em;
   margin-left: 2em;
+}
+
+ul.post-list {
+  padding-left: 0;
+  padding-right: 0;
+
+  p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre, ul, ol {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    // @extend %clearfix;
+  
+    @media screen and (min-width: $on-large) {
+      max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+      // padding-right: $spacing-unit;
+      // padding-left: $spacing-unit;
+    }
+
+    @media print {
+      max-width: none;
+    }
+  }
+
+  a.post-link {
+    color: inherit;
+    font-size: 1.6em;
+    line-height: 1em;;
+  }
 }

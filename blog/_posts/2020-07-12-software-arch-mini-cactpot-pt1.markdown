@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Software architecture study: mini cactpot pt I"
+title:  "Software architecture study: mini cactpot pt 1"
 date:   2020-07-12 10:36:00 -0500
 categories: software-architecture swift
+summary: Follow along in this architectural study of Mini Cactpot. In part 1, I explore the software design of a cactpot scratch-off card, and try to design an ergonomic API for getting, setting, and querying its cells.
 ---
 
 [Mini cactpot](https://na.finalfantasyxiv.com/lodestone/playguide/contentsguide/goldsaucer/cactpot/) is a chance-based game that resembles a scratch-off ticket. The game consists of a 3x3 grid containing the digits 1 through 9, and each digit is used exactly once. The player chooses a horizontal, vertical, or diagonal row of 3 squares. The sum of these squares is used to determine the player's payout, according to a pay table which is shown to the player. However, at the start of the game only 1 random square is revealed to the player. The player may then choose 3 more squares to reveal before picking a row.
