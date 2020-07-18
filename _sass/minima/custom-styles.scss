@@ -20,8 +20,20 @@ body {
     background-color: $alt-background-color;
     color: #DDD;
   }
+
+  @media print {
+    background-color: #FFF;
+    color: #000;
+    font-size: 12pt;
+  }
 }
 
+strong {
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: #FFF;
+  }
+}
 
 div.site-logo {
   display: inline-block;
@@ -47,10 +59,19 @@ h1, h2, h3, h4, h5, h6 {
   @media (prefers-color-scheme: dark) {
     color: #FFF;
   }
+
+  @media print {
+    color: #000;
+    margin-top: 0;
+  }
 }
 
 .page-content {
   padding: 4em 0;
+
+  @media print {
+    padding: 0;
+  }
 }
 
 code {
@@ -63,8 +84,6 @@ $figure-border-color: adjust-color($figure-background-color, $lightness: -8%);
 $alt-figure-background-color: adjust-color($alt-background-color, $lightness: 6%);
 $alt-figure-border-color: adjust-color($alt-figure-background-color, $lightness: -8%);
 
-
-
 pre, code {
   line-height: 1.2em;
   background-color: $figure-background-color;
@@ -73,6 +92,10 @@ pre, code {
 
   @media (prefers-color-scheme: dark) {
     background-color: $alt-figure-background-color;
+  }
+
+  @media print {
+    background-color: #FFF;
   }
 }
 
@@ -87,7 +110,9 @@ header p.post-meta {
   padding: 0;
   max-width: inherit;
 
-  p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre {
+  $list-indent: 40;
+
+  p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre, ul, ol {
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
     margin-right: auto;
     margin-left: auto;
@@ -99,6 +124,20 @@ header p.post-meta {
       max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
       padding-right: $spacing-unit;
       padding-left: $spacing-unit;
+    }
+
+    @media print {
+      max-width: none;
+    }
+  }
+
+  ul, ol {
+    padding-left: (($spacing-unit + $list-indent) / 2);
+
+    @media screen and (min-width: $on-large) {
+      max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+      padding-right: $spacing-unit;
+      padding-left: $spacing-unit + $list-indent;
     }
   }
 
@@ -134,4 +173,20 @@ a {
       color: adjust-color($alt-link-color, $lightness: -8%);
     }
   }
+}
+
+.image-gallery {
+  text-align: center;
+}
+
+.image-gallery img {
+  max-height: 20em;
+  max-width: 100%;
+}
+
+.image-float-right {
+  float: right;
+  width: 20%;
+  margin-top: 1em;
+  margin-left: 2em;
 }
