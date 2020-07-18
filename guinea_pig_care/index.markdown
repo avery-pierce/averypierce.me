@@ -32,6 +32,16 @@ When Nash is hungry, he might gnaw on the bars of the cage to make noise in an e
 
 Once per day (or every other day, if you don't have time to do it one day), you'll need to clean the droppings from the cage. The easiest way I've found to clean the cage is to fold the bottom lining in half (hot-dog style) and funnel it into the garbage can. You'll probably need to shake it a bit to get everything. Then, use the little broom and dust pan to sweep up any remaining droppings that are still on the floor of the cage.
 
+## Long-Term Care (7+ days)
+
+The cage lining needs to be washed once a week. When washing the lining remember these rules:
+
+1. **Cold wash only**. The lining is machine washable, but only in cold water. The material can be damaged with too much heat.
+2. **Free & clear detergent only**. The guinea pigs are sensitive to the perfumes and dyes used in most typical detergents.
+3. **Low heat dry only**. You can also air dry, if you prefer.
+
+After you do your daily cleaning, I recommend taking the lining outside to whip off any stubborn hay, hair, or droppings. Keep whipping it until no more hair or hay shakes off (alternatively, you can vaccuum it off). After that's done, you can toss it in the washing machine.
+
 ## Contact
 
 If you have any questions, feel free to get in touch with me. You have my contact info.
