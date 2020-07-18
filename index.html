@@ -1,100 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-    
-            html {
-                background-color: #EEEEEF;
-                font-family: sans-serif;
-                font-weight: 400;
-                font-size: 1.2em;
-            }
+<html id="homepage">
 
-            @media only screen and (min-width: 640px) {
-                html {
-                    font-size: 1.6em;
-                }
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-
-            .page-header {
-                background-color: #667766;
-                height: 10em;
-                margin-bottom: 4em;
-                padding: 1px;
-            }
-
-            .page-header .profile-image {
-                display: block;
-                margin: auto;
-                margin-top: 3em;
-                border-radius: 100%;
-                width: 10em;
-                border: solid 0.2em #FFF;
-            }
-
-            /* Content-wrapper */
-            .content {
-                margin: auto;
-                padding-left: 1.4em;
-                padding-right: 1.4em;
-                max-width: 800px;
-            }
-
-            header h1 {
-                color: #222;
-                font-size: 1.8em;
-            }
-
-            header h2 {
-                color: #666;
-                font-size: 1.4em;
-            }
-
-            /* Content */
-            .content-body {
-                margin-top: 1em;
-            }
-
-            .name {
-                color: #000;
-            }
-
-            .pronouns {
-                font-size: 0.7em;
-            }
-
-        </style>
-    </head>
-
-    <body>
-        <header class="page-header">
-            <img class="profile-image" src="/img/profile-image.jpg" />
-        </header>
-        <div class="content">
-            <header>
-                <div>
-                    <h1>Hello World!</h1>
-                    <h2>My name's <span class="name">Avery</span>. <span class="pronouns">(he/him)</span></h2>
-                </div>
-            </header>
-            <div class="content-body">
-                <p>I'm an iOS app developer, amateur bread baker, and I have two pet guinea pigs. You can find me on twitter at <a href="https://twitter.com/AveryPierceApps">@AveryPierceApps</a>.</p>
-                <p>If your business is hiring an iOS app developer, <a href="hire">let me know!</a></p>
-            </div>
-        </div>
-    </body>
+<head>
+  <link rel="stylesheet" href="/assets/css/homepage.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="first-name">Avery</h1>
+      <h1 class="last-name">Pierce</h1>
+      <h2>he/him</h2>
+      <p>
+        Guinea pig owner, amateur bread baker, and mobile product engineer at Spin. Elgin, IL.
+      </p>
+      <p class="contact"><a href="https://twitter.com/AveryPierceApps">@AveryPierceApps</a></p>
+      <p class="contact"><a href="mailto:avery.pierce@pm.me">avery.pierce@pm.me</a></p>
+    </div>
+  </header>
+  <div class="wrapper">
+    <h1>Petsitters</h1>
+    <p>If you're pet sitting Nash and Edsel for me, <a href="./guinea_pig_care/">I've written up a helpful guide</a>.</p>
+  </div>
+</body>
 </html>

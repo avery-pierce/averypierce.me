@@ -1,0 +1,137 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+@use "sass:color";
+
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: $background-color;
+  font-family: 'Alice', serif;
+  line-height: 1.6em;
+  font-size: 14pt;
+  color: #333;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $alt-background-color;
+    color: #DDD;
+  }
+}
+
+
+div.site-logo {
+  display: inline-block;
+  font-size: 30pt;
+  font-family: 'Playfair Display', serif;
+  color: #FFF;
+  background-color: #000;
+  opacity: 0.5;
+  padding: 2pt 4pt;
+
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1c2c34;
+
+  @media (prefers-color-scheme: dark) {
+    color: #FFF;
+  }
+}
+
+.page-content {
+  padding: 4em 0;
+}
+
+code {
+  font-size: 0.85em;
+}
+
+$figure-background-color: adjust-color($background-color, $lightness: 6%);
+$figure-border-color: adjust-color($figure-background-color, $lightness: -8%);
+
+$alt-figure-background-color: adjust-color($alt-background-color, $lightness: 6%);
+$alt-figure-border-color: adjust-color($alt-figure-background-color, $lightness: -8%);
+
+
+
+pre, code {
+  line-height: 1.2em;
+  background-color: $figure-background-color;
+  // border-color: $figure-border-color;
+  border: none;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $alt-figure-background-color;
+  }
+}
+
+header p.post-meta {
+  margin: 0;
+  line-height: 1em;
+  font-size: 1em;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  max-width: inherit;
+
+  p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+    @extend %clearfix;
+  
+    @media screen and (min-width: $on-large) {
+      max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+      padding-right: $spacing-unit;
+      padding-left: $spacing-unit;
+    }
+  }
+
+  figure.highlight {
+    border-top: solid $hairline $figure-border-color;
+    border-bottom: solid $hairline $figure-border-color;
+    background-color: $figure-background-color;
+
+    @media (prefers-color-scheme: dark) {
+      border-top: solid $hairline $alt-figure-border-color;
+      border-bottom: solid $hairline $alt-figure-border-color;
+      background-color: $alt-figure-background-color;
+    }
+
+    pre {
+      border: none;
+      margin-bottom: 0;
+      background: none;
+    }
+
+    code {
+      background: none;
+    }
+  }
+}
+
+a {
+  @media (prefers-color-scheme: dark) {
+    $alt-link-color: #66AAFF;
+    color: $alt-link-color;
+
+    &:visited {
+      color: adjust-color($alt-link-color, $lightness: -8%);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@use "sass:color";
+
+body {
+  padding-bottom: 10em;
+}
+
+header {
+  $text-color: white;
+
+  background-image: url("/img/hero_image_tight.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 10% 5%;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+
+  @media screen and (min-width: 400px) {
+    padding: 20% 5%;
+    font-size: 1em;
+  }
+
+  @media screen and (min-width: $on-palm) {
+    padding: 20% 5%;
+    font-size: 1.4em;
+  }
+
+  @media screen and (min-width: $on-large) {
+    padding: 20% 5%;
+    font-size: 1.8em;
+  }
+
+  @media screen and (min-width: $on-xlarge) {
+    padding: 23% 5%;
+    font-size: 2.2em;
+  }
+
+
+  .container {
+    width: 40%;
+  }
+
+  h1, h2, p {
+    line-height: 1em;
+    color: $text-color;
+    text-shadow: 0em 0em 0.3em black;
+  }
+
+  h1 {
+    font-size: 2.4em;
+    line-height: 0.9em;
+  }
+
+  h2 {
+    font-size: 1.0em;
+    opacity: 0.8;
+  }
+
+  p {
+    margin-top: 1em;
+    line-height: 1.2em;
+    
+    &.contact {
+      font-size: 0.8em;
+      margin: 0;
+      padding: 0;
+
+      opacity: 0.8;
+      &:hover {
+        opacity: 1.0;
+      }
+    }
+  }
+
+  a {
+    color: $text-color;
+
+    &:visited {
+      color: $text-color;
+    }
+
+    &:hover {
+      color: $text-color;
+      text-decoration: underline;
+    }
+  }
+}
