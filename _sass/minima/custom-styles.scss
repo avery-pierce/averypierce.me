@@ -142,6 +142,7 @@ header p.post-meta {
   }
 
   figure.highlight {
+    border-radius: 0;
     border-top: solid $hairline $figure-border-color;
     border-bottom: solid $hairline $figure-border-color;
     background-color: $figure-background-color;
@@ -150,6 +151,11 @@ header p.post-meta {
       border-top: solid $hairline $alt-figure-border-color;
       border-bottom: solid $hairline $alt-figure-border-color;
       background-color: $alt-figure-background-color;
+    }
+
+    @media print {
+      border-top: dotted 1pt #000;
+      border-bottom: dotted 1pt #000;
     }
 
     pre {
