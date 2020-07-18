@@ -112,6 +112,10 @@ header p.post-meta {
 
   $list-indent: 40;
 
+  h2 {
+    margin-top: 1.4em;
+  }
+
   p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre, ul, ol {
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
     margin-right: auto;
