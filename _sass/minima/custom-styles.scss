@@ -116,7 +116,7 @@ header p.post-meta {
     margin-top: 1.4em;
   }
 
-  p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre, ul, ol {
+  p, h1, h2, h3, h4, h4, h5, h6, header p.post-meta, figure pre, ul, ol, div.highlight pre {
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
     margin-right: auto;
     margin-left: auto;
@@ -145,7 +145,7 @@ header p.post-meta {
     }
   }
 
-  figure.highlight {
+  figure.highlight, div.highlight {
     border-radius: 0;
     border-top: solid $hairline $figure-border-color;
     border-bottom: solid $hairline $figure-border-color;
