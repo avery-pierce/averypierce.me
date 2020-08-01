@@ -4,6 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2020-07-11 15:29:20 -0500
 categories: jekyll update
 summary: This is the post summary
+draft: true
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -37,6 +38,16 @@ struct PlayingCard {
   var suit: Suit
 }
 {% endhighlight %}
+
+```swift
+var foo: String = "Hello World!"
+class MyNeatClass {
+  var name: String
+  init() {
+    this.name = "Foo"
+  }
+}
+```
 
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
