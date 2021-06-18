@@ -12,5 +12,5 @@ Here are a few things I like to cook:
 
 [Stir fry](./stir_fry) - I cook this once a week and make a little different each time. It's great for expermientation.
 
-Passable frech onion dip - When I'm hosting and I need some dip in a pinch, this works fairly well.
+[Passable frech onion dip](./passable_french_onion_dip) - When I'm hosting and I need some dip in a pinch, this works fairly well.
 
