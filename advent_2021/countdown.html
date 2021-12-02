@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advent of Code Livestream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+      body {
+        background: #0f0f23;
+        color: #cccccc;
+        font-family: "Source Code Pro", monospace;
+        font-size: 14px;
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          font-size: 32px;
+        }
+      }
+
+      a {
+        color: #ccc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #eee;
+        text-shadow: 0 0 2px #eee, 0 0 5px #eee;
+      }
+
+      a#twitch_link {
+        color: #9147ff
+      }
+
+      a#twitch_link:hover {
+        color: #9f5fff;
+        text-shadow: 0 0 2px #9f5fff, 0 0 5px #9f5fff;
+      }
+
+      a#youtube_link {
+        color: rgb(234, 51, 35)	
+      }
+
+      a#youtube_link:hover {
+        color: rgb(255, 93, 79);
+        text-shadow: 0 0 2px rgb(255, 93, 79), 0 0 5px rgb(255, 93, 79);
+      }
+
+      a#twitter_link {
+        color: #1DA1F2;
+      }
+
+      a#twitter_link:hover {
+        color: #39b3ff;
+        text-shadow: 0 0 2px #39b3ff, 0 0 5px #39b3ff;
+      }
+
+      strong {
+        font-weight: normal;
+        color: #eee;
+        text-shadow: 0 0 2px #eee, 0 0 5px #eee;
+      }
+
+      main {
+        text-align: center;
+        overflow-x: hidden;
+      }
+
+      main pre {
+        display: inline-block;
+        text-align: left;
+      }
+
+      #wreath {
+        color: rgb(0, 204, 0);
+      }
+
+      #wreath .wreath_text {
+        color: #ccc;
+      }
+
+      #wreath #countdown_msg {
+        text-shadow: 0 0 2px #ddd, 0 0 5px #ddd;
+      }
+
+      #twinkle_lights {
+        color: #444;
+      }
+
+      #twinkle_lights .twinkle_bulb {
+        animation-name: twinkle;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(3);
+      }
+
+      @keyframes twinkle {
+        0%, 100% {
+          text-shadow: 0 0 0px #444, 0 0 0px #444;
+          color: #444;
+        }
+        50% {
+          text-shadow: 0 0 2px rgb(255, 235, 119), 0 0 5px rgb(255, 235, 119);
+          color: rgb(255, 235, 119);
+        }
+      }
+
+      .twinkle_3s {
+        animation-duration: 3s;
+      }
+
+      .twinkle_4s {
+        animation-duration: 4s;
+      }
+      
+      .twinkle_5s {
+        animation-duration: 5s;
+      }
+
+      .delay_3s {
+        animation-delay: -3s;
+      }
+
+      .delay_4s {
+        animation-delay: -4s;
+      }
+
+      .delay_5s {
+        animation-delay: -5s;
+      }
+
+
+    </style>
+    <script>
+
+      function getNextStreamTime() {
+        let nextStream = new Date()
+        nextStream.setUTCHours(15,0,0,0)
+        
+        const now = new Date()
+        if (now > nextStream) {
+          const MILLISECONDS_IN_A_DAY = 24 /* hours */ * 60 /* minutes */ * 60 /* seconds */ * 1000 /* ms */
+          const nextDay = nextStream.getTime() + MILLISECONDS_IN_A_DAY
+          nextStream = new Date(nextDay)
+        }
+        return nextStream
+      }
+
+      function getMSUntilNextStream() {
+        const now = new Date();
+        const msUntilNextStream = getNextStreamTime().getTime() - now.getTime();
+        return msUntilNextStream;
+      }
+
+      function formatTimeInterval(timeIntervalMS) {
+        const MS_PER_SECOND = 1000
+        const MS_PER_MINUTE = MS_PER_SECOND * 60
+        const MS_PER_HOUR = MS_PER_MINUTE * 60
+
+        const hours = Math.floor(timeIntervalMS / MS_PER_HOUR)
+
+        const remainingMinsMS = timeIntervalMS % MS_PER_HOUR
+        const mins = Math.floor(remainingMinsMS / MS_PER_MINUTE)
+        
+        const remainingSecondsMS = remainingMinsMS % MS_PER_MINUTE
+        const seconds = Math.floor(remainingSecondsMS / MS_PER_SECOND)
+
+        return `${pad2Digits(hours)}:${pad2Digits(mins)}:${pad2Digits(seconds)}`
+      }
+
+      function pad2Digits(number) {
+        let str = number + ""
+        while (str.length < 2) {
+          str = "0" + str
+        }
+        return str
+      }
+
+      function getCountdownMessage() {
+        const interval = getMSUntilNextStream()
+        const MILLISECONDS_IN_A_DAY = 24 /* hours */ * 60 /* minutes */ * 60 /* seconds */ * 1000 /* ms */
+        const BLEED = 2 /* hours */ * 60 /* minutes */ * 60 /* seconds */ * 1000 /* ms */
+        const THRESHOLD = MILLISECONDS_IN_A_DAY - BLEED
+
+        if (interval > THRESHOLD) {
+          return "moments"
+        } else {
+          return formatTimeInterval(interval)
+        }
+      }
+
+      function streamCountdownMessage() {
+        const space =  "          ".length
+        const message = getCountdownMessage()
+        const totalPadding = space - message.length
+        let paddedMessage = message
+        for (i = 0; i < totalPadding; i++) {
+          if (i % 2 == 0) {
+            paddedMessage = " "+paddedMessage
+          } else {
+            paddedMessage = paddedMessage+" "
+          }
+        }
+
+        return paddedMessage
+      }
+
+      function renderStreamCountdown() {
+        document.getElementById("countdown_msg").innerHTML = streamCountdownMessage()
+      }
+
+      function renderLights() {
+        const bulbPlaceholderChar = "%";
+        const lightsArt = `
+%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%
+(     )     (     )     )     (     )     (     )     )     (
+%     %     %     %     %     %     %     %     %     %     %
+)     (     )     (     (     )     (     )     (     )     )
+%     %     %     %     %     %     %     %     %     %     %
+(           )                 (     )           )           (
+%           %                 %     %           %           %
+            (                       (           (
+            %                       %           %
+`.replace("\n", "");
+        const speedClasses = ["twinkle_3s", "twinkle_4s", "twinkle_5s"];
+        const delayClasses = ["delay_3s", "delay_4s", "delay_5s"];
+        const litArt = lightsArt.replaceAll(bulbPlaceholderChar, () => {
+          const speedClass = randomElement(speedClasses)
+          const delayClass = randomElement(delayClasses)
+          return `<span class="twinkle_bulb ${speedClass} ${delayClass}">@</span>`;
+        });
+        document.getElementById("twinkle_lights").innerHTML = litArt;
+      }
+
+      function renderWreath() {
+        const wreathArt = `
+       ,_,_,,_,
+     ,}'))/)/(('{.
+   ,{>)(/))/(/))(<}.
+  }>)(,'        .)(<{
+ {>(<}           ()>)<}
+}>)<} ##########  }>(<{
+{>(<{ until live! }>)<}
+{>)<{             }>(<{
+ }>(<.-.        _}>(<{
+  {>))  ^-,_,--' )(<}
+   ^}(    (_)    (}' 
+      ^""";|:--._/
+          ;|:
+         ; | :
+         ; | ;
+        ;  ;/
+         ^.;
+`.replace("\n", "");
+        const filledWreath = wreathArt
+          .replace("##########", `<span id="countdown_msg" class="wreath_text"></span>`)
+          .replace("until live!", `<span class="wreath_text">until live!</span>`);
+        document.getElementById("wreath").innerHTML = filledWreath;
+      }
+
+      function randomElement(array) {
+        const index = Math.floor(Math.random() * array.length);
+        return array[index];
+      }
+
+      function scheduleRefresh() {
+        setInterval(() => {
+          renderStreamCountdown()
+        }, 1000)
+      }
+
+      window.onload = function() {
+        renderLights();
+        renderWreath();
+        renderStreamCountdown();
+        scheduleRefresh();
+      }
+
+    </script>
+  </head>
+  <body>
+    <main>
+      <div><pre id="twinkle_lights"></pre></div>
+      <div><pre id="wreath"></pre></div>
+    </main>
+  </body>
+</html>
