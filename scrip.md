@@ -1,3 +1,9 @@
+---
+layout: page
+title: Scrip
+permalink: /scrip
+---
+
 Scrip is a deck-building card game for 2-4 players played with a standard deck of 52 playing cards. Red cards score points, and black cards help you build your deck. The goal of the game is to have the most points in your deck once all the cards have been collected.
 
 (This game is very much a work-in-progress, and has not been playtested much. Feel free to alter the rules as it suits you. If you have feedback, my DMs are open at [@AveryPierceApps](https://twitter.com/AveryPierceApps)!)
