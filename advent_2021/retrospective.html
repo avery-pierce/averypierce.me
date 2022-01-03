@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advent of Code Livestream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+      body {
+        background: #0f0f23;
+        color: #cccccc;
+        font-family: "Source Code Pro", monospace;
+        font-size: 14px;
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          font-size: 22px;
+        }
+      }
+
+      a {
+        color: #1DA1F2;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #39b3ff;
+        text-shadow: 0 0 2px #39b3ff, 0 0 5px #39b3ff;
+      }
+
+      a#twitch_link {
+        color: #9147ff
+      }
+
+      a#twitch_link:hover {
+        color: #9f5fff;
+        text-shadow: 0 0 2px #9f5fff, 0 0 5px #9f5fff;
+      }
+
+      a#youtube_link {
+        color: rgb(234, 51, 35)	
+      }
+
+      a#youtube_link:hover {
+        color: rgb(255, 93, 79);
+        text-shadow: 0 0 2px rgb(255, 93, 79), 0 0 5px rgb(255, 93, 79);
+      }
+
+      a#twitter_link {
+        color: #1DA1F2;
+      }
+
+      a#twitter_link:hover {
+        color: #39b3ff;
+        text-shadow: 0 0 2px #39b3ff, 0 0 5px #39b3ff;
+      }
+
+      strong {
+        font-weight: normal;
+        color: #eee;
+        text-shadow: 0 0 2px #eee, 0 0 5px #eee;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 20em;
+      }
+
+      p, li {
+        line-height: 1.6em;
+      }
+
+      li {
+        margin-bottom: 1em;
+      }
+
+      #twinkle_wrapper {
+        text-align: center;
+        overflow-x: hidden;
+      }
+     
+      #twinkle_lights {
+        display: inline-block;
+        text-align: left;
+        color: #444;
+      }
+
+      #twinkle_lights .twinkle_bulb {
+        animation-name: twinkle;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(3);
+      }
+
+      @keyframes twinkle {
+        0%, 100% {
+          text-shadow: 0 0 0px #444, 0 0 0px #444;
+          color: #444;
+        }
+        50% {
+          text-shadow: 0 0 2px rgb(255, 235, 119), 0 0 5px rgb(255, 235, 119);
+          color: rgb(255, 235, 119);
+        }
+      }
+
+      .twinkle_3s {
+        animation-duration: 3s;
+      }
+
+      .twinkle_4s {
+        animation-duration: 4s;
+      }
+      
+      .twinkle_5s {
+        animation-duration: 5s;
+      }
+
+      .delay_3s {
+        animation-delay: -3s;
+      }
+
+      .delay_4s {
+        animation-delay: -4s;
+      }
+
+      .delay_5s {
+        animation-delay: -5s;
+      }
+
+
+    </style>
+    <script>
+      function renderLights() {
+        const bulbPlaceholderChar = "%";
+        const lightsArt = `
+%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%~~~~~%
+(     )     (     )     )     (     )     (     )     )     (
+%     %     %     %     %     %     %     %     %     %     %
+)     (     )     (     (     )     (     )     (     )     )
+%     %     %     %     %     %     %     %     %     %     %
+(           )                 (     )           )           (
+%           %                 %     %           %           %
+            (                       (           (
+            %                       %           %
+`.replace("\n", "");
+        const speedClasses = ["twinkle_3s", "twinkle_4s", "twinkle_5s"];
+        const delayClasses = ["delay_3s", "delay_4s", "delay_5s"];
+        const litArt = lightsArt.replaceAll(bulbPlaceholderChar, () => {
+          const speedClass = randomElement(speedClasses)
+          const delayClass = randomElement(delayClasses)
+          return `<span class="twinkle_bulb ${speedClass} ${delayClass}">@</span>`;
+        });
+        document.getElementById("twinkle_lights").innerHTML = litArt;
+      }
+
+      function randomElement(array) {
+        const index = Math.floor(Math.random() * array.length);
+        return array[index];
+      }
+
+      window.onload = function() {
+        renderLights();
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="twinkle_wrapper"><pre id="twinkle_lights"></pre></div>
+    <main>
+      <h2>Looking back at my Advent of Code 2021 Livestream</h2>
+      <p>I live-streamed Advent of Code every morning from December 1st to December 25th (with two exceptions: On one day I chose not to stream because I didn't have the energy to. On another day, I simply forgot to click "start streaming" and did a whole episode without broadcasting. Oops!). I gotta say, committing to wake up every morning in time to start the stream – even on weekends – was more challenging than I expected. As of writing, I still haven't completed all the puzzles, and I don't know if I'll get back to them any time soon.</p>
+      
+      <p>This was also my <em>first ever</em> experience streaming something on Twitch, which was eye-opening on its own. I've never gotten into Twitch, but a lot of my friends watch streams regularly. Going in, my expectation was that the Twitch viewing experience would be a cross between broadcast sports (watch skilled competitors play a game at its most advanced level) and podcasting (the host's personality is generally more important than the topic). What I <em>did not</em> anticipate was how social the viewing experience is, and the popularity of the streamer makes a huge difference for the viewing experience. I feel like I've seen clips of larger streamers in the past where the comment section is constantly going nuts, but the experience for smaller streamers is totally different. Streams from smaller streamers feel more like old-school chat rooms from back in the day, except with one person playing a game in the background. People filter in, say hi, maybe stick around for a bit, then take off. In my case, the chat section was usually a ghost town, with friends popping in once in a while. On some occasions, a stranger who was also playing along with Advent of Code would join in and offer suggestions or support, which was delightful!</p>
+            
+      <p>I found the ecosystem of tools that streamers use to be pretty mature. OBS seems to be the de-facto standard tool for screen captures, and to be honest, I'm kind of blown away that it's available for free. The fact that it supports semi-transparent web content frames is super intelligent, and seems to be the basis for most of the goofy integrations that people setup for new subscribers and effects.</p>
+
+      <p>Background music was something I wanted for my stream, because otherwise watching someone program in silence is not very compelling entertainment. There are sites that will sell you packages for background music, but I found my music on <a href="https://nightride.fm/">nightride.fm's</a> list of <a href="https://streamsafe.nightride.fm">stream-safe music</a>. I just had to get the tracks from Apple Music and put them into a playlist. The vibe didn't always fit, but it was cheap and easy way to get <em>something</em>.</p>
+
+      <p>Once you start streaming on Twitch, the platform aggressively encourages you to <strong>grow grow grow</strong> your audience. The site constantly reminds you how far you have to go to reach the next milestone to becoming a Twitch partner, even if you're only there to hang out with friends: "Get N followers", "Get N viewers watching your channel at the same time", "Get N viewers chatting at the same time". From a business perspective, this makes perfect sense – save on marketing costs by convincing your user base to market themselves. This isn't a great fit for my use-case, where I only intended to stream for one month, then stop.</p>
+      
+      <p>Of course, Twitch wouldn't be the success that it is if the formula didn't work. I actually kinda enjoyed programming for an audience, so I began pondering what I could do with my Twitch channel in January through November. Here are a few ideas:
+
+        <ul>
+          <li><a href="https://screeps.com">Screeps World</a> is a massively-multiplayer online real-time strategy game that requires you to program little robots (using real Javascript) to manuever around obstacles, gather resources, and conquer other players' territory. I've played this before, but it's been a while. Might be fun getting back into it!</li>
+          <li>I have a website called <a href="https://utils.cool">utils.cool</a> that's just sorta collecting dust. My vision for this website is to provide an assortment of simple web-based tools without the usual ad-bloat that most of these kinds of websites have. The trouble is that I've found it difficult to fit ongoing development of this website into my daily life, but I bet it would be easier to make progress on it if I schedule time to do it (like I did with Advent of Code). It might be fun to live-stream the design and development of this website, and the audience would be able to try out new features and provide feedback as I deploy them in real-time.</li>
+          <li><a href="https://playwonderbox.com">Wonderbox</a> is one of my favorite games, and I feel like it doesn't get the attention it deserves. The best way I can explain it is a cross between Zelda, Super Mario Maker, and Captain Toad Treasure Tracker. It's available on <a href="https://apps.apple.com/app/wonderbox-adventure-maker/id1520720139?ls=1?itscg=30800&itsct=wonderbox">Apple Arcade</a> for all of Apple's products (iPhone, iPad, Apple TV, and Mac), but not for PC or any of the traditional consoles. Sadly, I've found their Mac client to be a unplayable on my machine, but the Apple TV client is pretty good. I think I would have to rig up an Apple TV like it's a game console to stream to Twitch, which is doable, but it's a project that would much  more setup than the other two ideas above.</li>
+        </ul>
+      </p>
+
+      <p>Not totally sure what I'll do going forward (if anything), but I'm so glad I had this experience. See you for Advent of Code 2022!</p>
+      <p>-Avery</p>
+      <a href="https://averypierce.me">averypierce.me</a>
+    </main>
+  </body>
+</html>
