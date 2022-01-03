@@ -1,6 +1,6 @@
-# Scrip
-
 Scrip is a deck-building card game for 2-4 players played with a standard deck of 52 playing cards. Red cards score points, and black cards help you build your deck. The goal of the game is to have the most points in your deck once all the cards have been collected.
+
+(This game is very much a work-in-progress, and has not been playtested much. Feel free to alter the rules as it suits you. If you have feedback, my DMs are open at [@AveryPierceApps](https://twitter.com/AveryPierceApps)!)
 
 ## Setup
 
@@ -77,8 +77,10 @@ The player with the highest score wins!
 Turn order goes like this:
 
 1. (optional) Spend spades and/or exchange cards
-2. (optional) Steal from the market
+2. (optional) Steal from the market (opponents can counter with clubs)
 3. Discard and draw
+
+Game ends when the stockpile is empty and the market does not have any red cards.
 
 * Hearts: Score 1 point for the rank of the card.
 * Diamonds: The player with the highest score in diamonds earns 25 bonus points.
