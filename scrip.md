@@ -41,7 +41,7 @@ If you have more than one spade in your hand, you may either spend each card sep
 
 This action cannot be blocked or countered by other players.
 
-### Exchange cads
+### Exchange cards
 
 On your turn, you may exchange a card in your hand with a card from the market, as long as the rank of the card from your hand is **greater than or equal to** the card in the market you are exchanging it with. The card that is taken from the market goes into the player's discard pile – not their hand.
 
@@ -94,7 +94,17 @@ On your turn:
 
 Game ends when the stockpile is empty and the market does not have any red cards.
 
-* `♥` Hearts: Score 1 point for the rank of the card.
-* `♦` Diamonds: The player with the highest score in diamonds earns 25 bonus points. Otherwise, they're worthless.
+* `♥` Hearts: Score points for the rank of the card (`5♥` is worth 5 points).
+* `♦` Diamonds: The player with the highest score in diamonds earns 25 points. Otherwise, they're worthless.
 * `♠` Spades: Can be spent to acquire cards from the market (spade must be **greater than or equal to** the card being bought)
 * `♣` Clubs: Can be played to counter a player stealing from the market (club must be **less than or equal to** the card being stolen)
+
+============
+
+## Rule variations to try
+
+When setting up the game, instead of dealing cards blind, try a draft: First, deal 6 cards to each player. Players choose which one of these 6 cards they want to keep for their deck, and pass the remaining 5 to their left. Repeat this 5 more times so all of the cards have been picked. You may find this results in a more balanced game!
+
+When it comes to scoring diamonds, instead of awarding points for the highest *total rank* of diamonds, try awarding points to the player who has the most diamond cards in their deck (so `2♦` is weighted the same as `A♦`)
+
+When exchanging cards, try playing a game where the exchanged card immediately goes into the players hand instead of the discard pile. If you exchanged your `Q♥` with a `Q♠`, you could then spend your newly acquired `Q♠` to buy back the `Q♥` you just exchanged!
