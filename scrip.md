@@ -10,7 +10,7 @@ Scrip is a deck-building card game for 2-4 players played with a standard deck o
 
 ## Setup
 
-Deal each player 6 cards at random. The players shuffle these cards and place them face-down in front of them. This is their deck. Each player draws three cards from their own deck to form their hand (at the start of the game, each player should have 3 cards in their hand, and 3 cards in their deck)
+Deal each player 6 cards. The players shuffle these cards and place them face-down in front of them. This is their deck. Each player draws three cards from their own deck to form their hand (at the start of the game, each player should have 3 cards in their hand, and 3 cards in their deck)
 
 Place 3 cards face up in the middle of the table. This is called the "Market".
 
@@ -33,11 +33,11 @@ Turn order goes like this:
 
 On your turn, you may spend spades to buy something from the market. The rank of the spade card you play must be **greater than or equal to** the rank of the card you are buying (Jack=11, Queen=12, King=13, Ace=15). The card that was acquired from the market is put into the players discard pile, along with the spade that was spent to acquire it (a spade card cannot be spent more than once on a turn)
 
-**Example**: On her turn, Alice has the 8-spades in her hand. The market shows 5-spades, 8-hearts, and 10-clubs. She may spend the 8-spades from her hand to buy either the 5-spades or the 8-hearts because her 8-spades is greater than or equal to both of these cards. She cannot spend the 8-spades to buy the 10-clubs because 10 is higher than 8.
+**Example**: On her turn, Alice has the `8♠` in her hand. The market shows `5♠`, `8♥`, and `10♣`. She may spend the `8♠` from her hand to buy either the `5♠` or the `8♥` because her `8♠` is greater than or equal to both of these cards. She cannot spend the `8♠` to buy the `10♣` because 10 is higher than 8.
 
-If you have more than one spade in your hand, you may either spend each card separately to make multiple buys, *or* you may add 2 or more cads together and treat the sum of those cards as your buy power.
+If you have more than one spade in your hand, you may either spend each card separately to make multiple buys, *or* you may add 2 or more cads together and treat the sum of those cards as your buy power. Remember, Ace is worth 15. Unless you have the `A♠`, you'll have to play more than one spade card to buy an Ace.
 
-**Example**: On her turn, Alice has the 8-spades and the 2-spades in her hand. The market shows 5-spades, 8-hearts, and 10-clubs. In addition to the options in the example above, she also has the option to spend *both* the 8-spades and the 2-spades to acquire the 10-clubs (because 8+2 ≥ 10)
+**Example**: On her turn, Alice has the `8♠` and the `2♠` in her hand. The market shows `5♠`, `8♥`, and `10♣`. In addition to the options in the example above, she also has the option to spend *both* the `8♠` and the `2♠` to acquire the `10♣` (because 8+2 ≥ 10)
 
 This action cannot be blocked or countered by other players.
 
@@ -45,9 +45,9 @@ This action cannot be blocked or countered by other players.
 
 On your turn, you may exchange a card in your hand with a card from the market, as long as the rank of the card from your hand is **greater than or equal to** the card in the market you are exchanging it with. The card that is taken from the market goes into the player's discard pile – not their hand.
 
-**Example**: On her turn, Alice has the King-clubs in her hand. The market shows the Queen-hearts. Alice chooses to exchange the King-clubs in her hand with the Queen-hearts in the market. The Queen-hearts gets placed into Alice's discard pile (not her hand).
+**Example**: On her turn, Alice has the `K♣` in her hand. The market shows the `Q♥`. Alice chooses to exchange the `K♣` in her hand with the `Q♥` in the market. The `Q♥` gets placed into Alice's discard pile (not her hand).
 
-**Tip**: High-ranking clubs are good to exchange. Since clubs aren't worth any points, and high-ranking clubs are not very effective at countering (see below), it's a good idea to exchange them for another high-ranking card in the market when you can. The Ace-clubs is not very useful on its own, but it can be exchanged for any other card in the market!
+**Tip**: High-ranking clubs are good to exchange. Since clubs aren't worth any points, and high-ranking clubs are not very effective at countering (see below), it's a good idea to exchange them for another high-ranking card in the market when you can. The `A♣` is not very useful on its own, but it can be exchanged for any other card in the market!
 
 **Tip**: Diamonds are only valuable if you have the most of any player (see scoring below). If you're pretty sure someone else has more diamonds than you, swap them out!
 
@@ -57,13 +57,13 @@ After you are done spending spades, you have the option to try to steal from the
 
 If you would like to steal a card, indicate which one you would like to steal. Then, going around the table to the player's left, each opponent has the option to play a club to keep the card for themselves (or pass).
 
-To counter a player stealing from the market, an opponent must have a club card in their hand that is **less than or equal to** the card the player is trying to steal. This ensures that higher-ranked cards are more difficult to steal. A player stealing the 2-hearts can only be blocked by a player with the 2-clubs in their hand. However, a player stealing the Ace-hearts can be countered by *any* club card.
+To counter a player stealing from the market, an opponent must have a club card in their hand that is **less than or equal to** the card the player is trying to steal. This ensures that higher-ranked cards are more difficult to steal. A player stealing the `2♥` can only be blocked by a player with the `2♣` in their hand. However, a player stealing the `A♥` can be countered by *any* club card.
 
 A player who successfully counters a steal gets to keep the card for themselves, and places it in their discard pile along with the club card they used to counter.
 
-**Example**: On her turn, Alice attempts to steal the 10-clubs. Bob, who is sitting to her left, has the Jack-clubs, but cannot play it because Jack is not less than or equal to the 10 being stolen, so he passes to Charlie (who is sitting to Bob's left). Charlie has the 5-clubs, and plays it to counter Alice's steal. Charlie takes the 10-clubs and places it in his discard pile with the 5-clubs he used to counter the steal.
+**Example**: On her turn, Alice attempts to steal the `10♣`. Bob, who is sitting to her left, has the `J♣`, but cannot play it because Jack is not less than or equal to the 10 being stolen, so he passes to Charlie (who is sitting to Bob's left). Charlie has the `5♣`, and plays it to counter Alice's steal. Charlie takes the `10♣` and places it in his discard pile with the `5♣` he used to counter the steal.
 
-**Tip**: If the 2-clubs shows up in the market, steal it! Nobody will be able to counter you, and the 2-clubs is the most powerful counter card in the game!
+**Tip**: If the `2♣` shows up in the market, steal it! Nobody will be able to counter you, and the `2♣` is the most powerful counter card in the game!
 
 ### Discard and Draw
 
@@ -94,7 +94,7 @@ On your turn:
 
 Game ends when the stockpile is empty and the market does not have any red cards.
 
-* Hearts: Score 1 point for the rank of the card.
-* Diamonds: The player with the highest score in diamonds earns 25 bonus points. Otherwise, they're worthless.
-* Spades: Can be spent to acquire cards from the market (spade must be **greater than or equal to** the card being bought)
-* Clubs: Can be played to counter a player stealing from the market (club must be **less than or equal to** the card being stolen)
+* `♥` Hearts: Score 1 point for the rank of the card.
+* `♦` Diamonds: The player with the highest score in diamonds earns 25 bonus points. Otherwise, they're worthless.
+* `♠` Spades: Can be spent to acquire cards from the market (spade must be **greater than or equal to** the card being bought)
+* `♣` Clubs: Can be played to counter a player stealing from the market (club must be **less than or equal to** the card being stolen)
