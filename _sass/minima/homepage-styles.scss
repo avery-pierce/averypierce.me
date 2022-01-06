@@ -31,10 +31,18 @@ header {
   }
 
   @media screen and (min-width: $on-xlarge) {
-    padding: 23% 5%;
+    box-sizing: border-box;
+    width: 1200px;
+    border-radius: 40px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+    padding: 140px 60px;
     font-size: 2.2em;
   }
-
 
   .container {
     width: 40%;
