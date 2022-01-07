@@ -1,16 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: default
+layout: page
+permalink: /cooking
+title: I love to cook.
 ---
-
-I love to cook.
-===============
 
 Here are a few things I like to cook:
 
-[Stir fry](./stir_fry) - I cook this once a week and make a little different each time. It's great for expermientation.
+[Basic Stir Fry](./stir_fry) - I cook this once a week and make a little different each time. It's great for expermientation.
 
-[Passable frech onion dip](./passable_french_onion_dip) - When I'm hosting and I need some dip in a pinch, this works fairly well.
+[Basic Curry](./curry) - This is good for experimentation too. I make this about once a week.
+
+[Basic French Onion Dip](./passable_french_onion_dip) - When I'm hosting and I need some dip in a pinch, this works fairly well.
 

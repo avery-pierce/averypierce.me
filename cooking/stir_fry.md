@@ -1,12 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: default
+layout: page
+title: Basic Stir Fry
 ---
-
-Stir Fry
-========
 
 This is a dish I like to make once a week, and it comes out a little different each time. It's a great dish to experiment with different vegitables and spices. Below is a list of various ingredients I've used. I've yet to find a combination that comes out bad.
 
