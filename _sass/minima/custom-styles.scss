@@ -49,6 +49,73 @@ div.site-logo {
   }
 }
 
+header.page-header {
+  font-size: 1em;
+  border-radius: 1em;
+  padding: 0.6em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  background-color: lighten($color: $background-color, $amount: 10%);
+  box-shadow: 0 0.1em 0.3em rgba($color: #000000, $alpha: 0.3);
+  color: #333;
+  
+  // Inset the header box on smaller screens
+  margin-left: $spacing-unit / 2;
+  margin-right: $spacing-unit / 2;
+  margin-bottom: 2em;
+
+  @media screen and (min-width: $on-large) {
+    font-size: 1em;
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media print {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: lighten($color: $alt-background-color, $amount: 10%);
+    box-shadow: 0 0.1em 0.3em darken($color: $alt-background-color, $amount: 5%);
+    color: #DDD;
+  }
+
+  img.header-pfp {
+    width: 3em;
+    height:  3em;
+    border-radius: 1.5em;
+    margin-right: 1em;
+    align-self: center;
+  }
+
+  h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    margin-bottom: 0.1em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    color: rgba($color: #333, $alpha: 0.7);
+    @media (prefers-color-scheme: dark) {
+      color: rgba($color: #DDD, $alpha: 0.7);
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+
+
 h1, ul.post-list h3 {
   font-family: 'Playfair Display', serif;
 }
@@ -67,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-content {
-  padding: 4em 0;
+  padding: 2em 0;
 
   @media print {
     padding: 0;
@@ -229,4 +296,10 @@ ul.post-list {
     font-size: 1.6em;
     line-height: 1em;;
   }
+}
+
+.hstack {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
 }

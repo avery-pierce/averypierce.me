@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <header class="page-header hstack">
+    <a href="/"><img src="/img/pfp.jpeg" class="header-pfp" /></a>
+    <div class="vstack">
+      <h1>{{ page.title }}</h1>
+      <h2>
+        {% if page.subtitle %}
+        {{ page.subtitle }}
+        {% else %}
+        <a href="/">averypierce.me</a>
+        {% endif %}
+      </h2>
+    </div>
+  </header>
+</div>
