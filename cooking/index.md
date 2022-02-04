@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /cooking
+permalink: /cooking/
 title: I love to cook.
 ---
 
